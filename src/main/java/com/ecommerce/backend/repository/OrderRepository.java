@@ -1,0 +1,13 @@
+package com.ecommerce.backend.repository;
+
+import com.ecommerce.backend.entity.Order;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
+    // --- ADMIN ICIN (Tum siparisleri tarih sirali getir) ---
+    List<Order> findAllByOrderByOrderDateDesc();
+
+    // --- YENI: Musteri icin (Sadece kendi adina ait olanlari getir) ---
+    List<Order> findAllByCustomerNameOrderByOrderDateDesc(String customerName);
+}

@@ -1,4 +1,4 @@
-# LuxeMarket - E-Commerce Backend API
+# E-Commerce Backend API
 
 This repository contains the **Restful API** for the LuxeMarket E-Commerce system. Built with **Java Spring Boot**, it handles data management, security, and business logic.
 
